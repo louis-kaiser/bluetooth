@@ -26,7 +26,10 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, ObservableObject {
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        print("Discovered \(peripheral.name ?? "a device")")
-        discoveredDevices.append(peripheral)
+        // Check if the peripheral is already in the discoveredDevices array
+        if !discoveredDevices.contains(peripheral) {
+            // If not, append it
+            discoveredDevices.append(peripheral)
+        }
     }
 }
