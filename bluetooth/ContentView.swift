@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             List(bluetoothManager.discoveredDevices, id: \.self) { device in
-                Text("\(device)" ?? "Unnamed Device")
+                Text(device.name ?? "Unnamed Device")
             }
         }
     }
