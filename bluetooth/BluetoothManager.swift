@@ -25,6 +25,7 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, ObservableObject {
         }
     }
     
+    // Discover Devices & Add Devices to List
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         // Check if the peripheral is already in the discoveredDevices array
         if !discoveredDevices.contains(peripheral) {
@@ -32,4 +33,18 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, ObservableObject {
             discoveredDevices.append(peripheral)
         }
     }
+    
+    
+    //
+    // Connect to Device
+    func connectToDevice(_ peripheral: CBPeripheral) {
+        centralManager.connect(peripheral, options: nil)
+    }
+    
+    // Connect to Device Info
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        print("Connected to \(peripheral.name ?? "device")")
+    }
+    
+
 }
