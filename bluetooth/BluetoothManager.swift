@@ -10,6 +10,7 @@ import CoreBluetooth
 
 class BluetoothManager: NSObject, CBCentralManagerDelegate, ObservableObject {
     private var centralManager: CBCentralManager!
+    @Published var discoveredDevices: [CBPeripheral] = []
     
     override init() {
         super.init()
@@ -26,14 +27,6 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, ObservableObject {
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         print("Discovered \(peripheral.name ?? "a device")")
-    }
-}
-
-struct ContentView: View {
-    @StateObject private var bluetoothManager = BluetoothManager()
-    
-    var body: some View {
-        Text("Scanning for Bluetooth devices...")
-            .padding()
+        discoveredDevices.append(peripheral)
     }
 }
