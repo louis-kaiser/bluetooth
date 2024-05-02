@@ -11,6 +11,7 @@
 		3DABA67F2BE39E7700582F49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABA67E2BE39E7700582F49 /* ContentView.swift */; };
 		3DABA6812BE39E7900582F49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DABA6802BE39E7900582F49 /* Assets.xcassets */; };
 		3DABA6852BE39E7900582F49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DABA6842BE39E7900582F49 /* Preview Assets.xcassets */; };
+		3DABA68C2BE39F8700582F49 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABA68B2BE39F8600582F49 /* BluetoothManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		3DABA6802BE39E7900582F49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DABA6822BE39E7900582F49 /* bluetooth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bluetooth.entitlements; sourceTree = "<group>"; };
 		3DABA6842BE39E7900582F49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3DABA68B2BE39F8600582F49 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				3DABA67C2BE39E7700582F49 /* bluetoothApp.swift */,
 				3DABA67E2BE39E7700582F49 /* ContentView.swift */,
+				3DABA68B2BE39F8600582F49 /* BluetoothManager.swift */,
 				3DABA6802BE39E7900582F49 /* Assets.xcassets */,
 				3DABA6822BE39E7900582F49 /* bluetooth.entitlements */,
 				3DABA6832BE39E7900582F49 /* Preview Content */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DABA67F2BE39E7700582F49 /* ContentView.swift in Sources */,
+				3DABA68C2BE39F8700582F49 /* BluetoothManager.swift in Sources */,
 				3DABA67D2BE39E7700582F49 /* bluetoothApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +276,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"bluetooth/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Requires access to Bluetooth";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Requires access to Bluetooth";
+				INFOPLIST_KEY_NSBluetoothWhileInUseUsageDescription = "Requires access to Bluetooth";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -308,6 +315,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"bluetooth/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Requires access to Bluetooth";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Requires access to Bluetooth";
+				INFOPLIST_KEY_NSBluetoothWhileInUseUsageDescription = "Requires access to Bluetooth";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
